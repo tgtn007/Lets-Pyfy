@@ -1,0 +1,11 @@
+import re
+a=input()
+arr=(re.findall('\d+', a))
+lst=(re.split('\d+',a))
+st=""
+for i in range(len(a)):
+    if a[i] in arr:
+        st+=a[i-1]*(int(a[i])-1)
+    else:
+        st+=a[i]
+print(st)
